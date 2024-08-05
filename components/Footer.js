@@ -12,10 +12,10 @@ function Footer() {
           {/* Logo and Navigation Column */}
           <div className="mb-4 md:mb-0">
             <Image
-              src="/COSMICADV.png"
-              alt="CosmicLogo"
+              src={'/COSMIC.svg'}
               width={200}
               height={100}
+              alt="COSMIC ADV"
             />
             <div className="flex flex-col">
               {/* <h2 className="font-bold text-3xl">Contact Us</h2> */}

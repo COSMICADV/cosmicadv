@@ -27,7 +27,7 @@ const CustomerLogos = () => {
   return (
     <section className="py-16 bg-gray-100 min-w-[80%]">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8" data-aos="fade-up">
+        <h2 className="text-[75px] font-bold mb-12" data-aos="fade-up">
           Our areas of expertise
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

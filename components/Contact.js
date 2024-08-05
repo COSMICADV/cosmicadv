@@ -1,45 +1,8 @@
 'use client';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Contact() {
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   email: '',
-  //   phone: '',
-  //   message: '',
-  // });
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData({
-  //     ...formData,
-  //     [name]: value,
-  //   });
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const response = await fetch('/api/contact', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(formData),
-  //   });
-
-  //   if (response.ok) {
-  //     alert('Message sent successfully!');
-  //     setFormData({
-  //       name: '',
-  //       email: '',
-  //       phone: '',
-  //       message: '',
-  //     });
-  //   } else {
-  //     alert('Failed to send message.');
-  //   }
-  // };
-
   const [enteredName, setEnteredName] = useState('');
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredMessage, setEnteredMessage] = useState('');
@@ -60,12 +23,15 @@ export default function Contact() {
   }
 
   return (
-    <div className="flex w-full mt-10">
-      <div className="w-1/2 max-w-md p-4">
-        <h1 className="text-2xl font-bold mb-5">Contact Us</h1>
+    <div className="flex flex-col items-center justify-center w-full min-h-screen p-4 bg-black">
+      <div className="w-full max-w-xs p-4 mt-8 flex items-center justify-center">
+        {/* <Image src={'/COSMIC.svg'} width={200} height={100} alt="COSMIC ADV" /> */}
+        <h1 className="text-4xl font-bold mb-5 text-white">Contact Us</h1>
+      </div>
+      <div className="w-full max-w-md p-4">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-lg font-medium text-gray-300">
               Name
             </label>
             <input
@@ -78,7 +44,7 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-lg font-medium text-gray-300">
               Email
             </label>
             <input
@@ -90,9 +56,8 @@ export default function Contact() {
               required
             />
           </div>
-
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-lg font-medium text-gray-300">
               Message
             </label>
             <textarea
@@ -111,13 +76,6 @@ export default function Contact() {
             Submit
           </button>
         </form>
-      </div>
-      <div className="w-1/2 p-4">
-        {/* <img
-          src="/path/to/your/image.jpg"
-          alt="Contact Image"
-          className="w-full h-full object-cover rounded-md"
-        /> */}
       </div>
     </div>
   );
