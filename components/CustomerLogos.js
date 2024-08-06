@@ -11,21 +11,21 @@ const CustomerLogos = () => {
 
   const logos = [
     '/customerLogos/logo1.svg',
-    '/customerLogos/logo2.svg',
-    '/customerLogos/logo3.svg',
-    '/customerLogos/logo4.svg',
-    '/customerLogos/logo5.svg',
-    '/customerLogos/logo6.svg',
-    '/customerLogos/logo7.svg',
-    '/customerLogos/logo8.svg',
-    '/customerLogos/logo9.svg',
-    '/customerLogos/logo10.svg',
-    '/customerLogos/logo11.svg',
-    '/customerLogos/logo12.svg',
+    '/customerLogos/Costa.svg',
+    '/customerLogos/glaxo.svg',
+    '/customerLogos/KC.svg',
+    '/customerLogos/InterContinental.svg',
+    '/customerLogos/Loreal.svg',
+    '/customerLogos/Virgin.svg',
+    '/customerLogos/BlomBank.svg',
+    '/customerLogos/MasterFood.svg',
+    '/customerLogos/RAYA.svg',
+    '/customerLogos/TGI.svg',
+    // '/customerLogos/logo12.svg',
   ];
 
   return (
-    <section className="py-16 bg-gray-100 min-w-[80%]">
+    <section className="py-16 bg-white min-w-[80%]">
       <div className="container mx-auto text-center">
         <h2 className="text-[75px] font-bold mb-12" data-aos="fade-up">
           Our areas of expertise
@@ -45,8 +45,8 @@ const CustomerLogos = () => {
                 <Image
                   src={logo}
                   alt={`Logo ${index + 1}`}
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                   className="object-contain h-24"
                 />
               </div>

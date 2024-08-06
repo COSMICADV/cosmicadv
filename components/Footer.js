@@ -12,7 +12,7 @@ function Footer() {
           {/* Logo and Navigation Column */}
           <div className="mb-4 md:mb-0">
             <Image
-              src={'/COSMIC.svg'}
+              src={'/COSMICFotter.svg'}
               width={200}
               height={100}
               alt="COSMIC ADV"
@@ -20,8 +20,10 @@ function Footer() {
             <div className="flex flex-col">
               {/* <h2 className="font-bold text-3xl">Contact Us</h2> */}
               <ul className="py-2">
-                <li className="my-2 text-lg">123 Main St</li>
-                <li className="my-2 text-lg">City, Country</li>
+                <li className="my-2 text-lg">
+                  212 Mohammed Nageeb ST, New Cairo
+                </li>
+                <li className="my-2 text-lg">Cairo, Egypt</li>
                 <li className="my-2 text-lg">
                   <a
                     href="tel:+201000581080"
