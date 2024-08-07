@@ -29,9 +29,7 @@ const solutions = [
 function Solutions() {
   return (
     <div className="min-h-screen px-36">
-      <h1 className="text-[75px] font-bold font-mono text-center my-12">
-        Our Solutions
-      </h1>
+      <h1 className="text-[75px] font-bold text-center my-12">Our Solutions</h1>
       <div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-4">
           {solutions.map((solution, index) => (

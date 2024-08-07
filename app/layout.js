@@ -1,10 +1,10 @@
-import { Inter } from 'next/font/google';
+import { Inter, Roboto } from 'next/font/google';
 import './globals.css';
 
 import NavigationBar from '@/components/NavigationBar';
 import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ['cyrillic-ext'] });
+const roboto = Roboto({ subsets: ['latin'], weight: '400' });
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <NavigationBar />
         {children}
         <Footer />

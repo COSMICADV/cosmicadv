@@ -56,14 +56,6 @@ function NavigationBar() {
           </li>
           <li>
             <Link
-              href="/people"
-              className={pathName === '/people' ? active : inActive}
-            >
-              People
-            </Link>
-          </li>
-          <li>
-            <Link
               href="/about-us"
               className={pathName === '/about-us' ? active : inActive}
             >
