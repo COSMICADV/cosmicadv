@@ -64,6 +64,14 @@ function NavigationBar() {
           </li>
           <li>
             <Link
+              href="/messages"
+              className={pathName === '/Messages' ? active : inActive}
+            >
+              Messages
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/contact-us"
               className={
                 'bg-black text-white font-white font-bold  p-3 transition-all rounded-md px-2 hover:bg-opacity-85'

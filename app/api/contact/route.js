@@ -15,7 +15,7 @@ export async function POST(req) {
     let client;
     try {
       client = await MongoClient.connect(
-        'mongodb+srv://shabaan:ic3wjvRxPPZt22BR@cosmic.botjfdk.mongodb.net/'
+        'mongodb+srv://shabaan:XmnfZhRGFIezBw8y@cosmic.botjfdk.mongodb.net/'
       );
     } catch (e) {
       console.log(e);
