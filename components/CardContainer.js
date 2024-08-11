@@ -2,7 +2,7 @@ import Card from './Card';
 
 function CardContainer() {
   return (
-    <div className="min-h-screen bg-red-300 flex flex-col items-center justify-center py-6 ">
+    <div className="min-h-screen  flex flex-col items-center justify-center py-6 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card
           image={'/cardImages/Card_img_Identity.webp'}
