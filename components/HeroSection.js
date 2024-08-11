@@ -9,7 +9,7 @@ function HeroSection() {
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gray-200"></div>
       </div>
       <section className="relative z-10 w-3/5 p-8 bg-white rounded-lg shadow-lg">
-        <h1 className="text-6xl mb-6 font-bold">
+        <h1 className="text-6xl mb-6 font-bold gap-3 space-y-2">
           Today, business success is driven by beliefs.
         </h1>
         <p className="font-semibold">
