@@ -2,7 +2,9 @@ import React from 'react';
 
 function HeroSection() {
   return (
-    <div className="relative w-screen h-screen flex items-center justify-center bg-gray-50 overflow-hidden">
+    <div className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden">
+      {' '}
+      {/* Changed bg-gray-50 to bg-black */}
       <div className="absolute top-0 left-0 w-full h-full bg-white overflow-hidden">
         <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-red-500 transform -rotate-45 origin-top-left -translate-x-[100px] -translate-y-1/4"></div>
         <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-yellow-500 transform rotate-45 origin-bottom-right translate-x-1/4 translate-y-1/4"></div>

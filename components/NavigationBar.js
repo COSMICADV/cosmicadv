@@ -65,7 +65,7 @@ function NavigationBar() {
           <li>
             <Link
               href="/messages"
-              className={pathName === '/Messages' ? active : inActive}
+              className={pathName === '/messages' ? active : inActive}
             >
               Messages
             </Link>

@@ -4,15 +4,22 @@ import { useEffect, useState } from 'react';
 
 function MessageComponent() {
   const [messages, setMessages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchMessages() {
-      const response = await fetch('api/messages');
-      const result = await response.json();
+      try {
+        const response = await fetch('api/messages');
+        const result = await response.json();
 
-      if (result.messages) {
-        setMessages(result.messages);
-        console.log(result);
+        if (result.messages) {
+          setMessages(result.messages);
+          console.log(result);
+        }
+      } catch (e) {
+        alert('Error Happened');
+      } finally {
+        setIsLoading(false);
       }
     }
     fetchMessages();
@@ -22,7 +29,13 @@ function MessageComponent() {
     <div className="flex flex-col items-center justify-center w-full min-h-screen p-4">
       <h1 className="text-4xl font-bold mb-8">Messages</h1>
       <div className="w-full max-w-5xl space-y-4">
-        {messages.length === 0 ? (
+        {isLoading ? (
+          <div className="flex items-center justify-center">
+            <div className="w-16 h-16 border-4 border-t-4 border-gray-200 rounded-full animate-spin">
+              <p className="text-xl">O</p>
+            </div>
+          </div>
+        ) : messages.length === 0 ? (
           <p>No messages found.</p>
         ) : (
           messages.map((message) => (
