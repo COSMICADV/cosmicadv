@@ -9,7 +9,6 @@ export async function GET() {
         'mongodb+srv://shabaan:XmnfZhRGFIezBw8y@cosmic.botjfdk.mongodb.net/'
       );
     } catch (e) {
-      console.log(e);
       return NextResponse.json({ message: 'Failed to connect' });
     }
     const db = client.db();
@@ -17,7 +16,6 @@ export async function GET() {
     try {
       messages = await db.collection('messages').find().toArray();
     } catch (e) {
-      console.log(e);
       return NextResponse.json({ message: 'Failed to resolve Message' });
     }
 

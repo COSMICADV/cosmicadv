@@ -14,7 +14,6 @@ function MessageComponent() {
 
         if (result.messages) {
           setMessages(result.messages);
-          console.log(result);
         }
       } catch (e) {
         alert('Error Happened');

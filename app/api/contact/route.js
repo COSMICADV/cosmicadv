@@ -10,7 +10,6 @@ export async function POST(req) {
     }
 
     const newMessage = { email, name, phone, message };
-    console.log(newMessage);
 
     let client;
     try {
@@ -18,7 +17,6 @@ export async function POST(req) {
         'mongodb+srv://shabaan:XmnfZhRGFIezBw8y@cosmic.botjfdk.mongodb.net/'
       );
     } catch (e) {
-      console.log(e);
       return;
     }
     const db = client.db();
@@ -26,7 +24,6 @@ export async function POST(req) {
       const result = await db.collection('messages').insertOne(newMessage);
       newMessage.id = result.insertedId;
     } catch (e) {
-      console.log(e);
       return;
     }
 

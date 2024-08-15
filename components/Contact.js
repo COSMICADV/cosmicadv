@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
   const [enteredName, setEnteredName] = useState('');
@@ -10,25 +11,51 @@ export default function Contact() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      body: JSON.stringify({
-        email: enteredEmail,
-        name: enteredName,
-        phone: enteredPhone,
-        message: enteredMessage,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
 
-    const result = await response.json();
-    console.log(result);
+    // Show loading toast
+    const loadingToast = toast.loading('Sending...');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify({
+          email: enteredEmail,
+          name: enteredName,
+          phone: enteredPhone,
+          message: enteredMessage,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Something went wrong!');
+      }
+
+      const result = await response.json();
+
+      // Show success toast
+      toast.success('Message sent successfully!', {
+        id: loadingToast,
+      });
+
+      // Reset form fields
+      setEnteredName('');
+      setEnteredEmail('');
+      setEnteredPhone('');
+      setEnteredMessage('');
+    } catch (error) {
+      // Show error toast
+      toast.error('Failed to send message. Please try again.', {
+        id: loadingToast,
+      });
+    }
   }
 
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen p-4">
+      <Toaster />
       <h1 className="text-6xl font-bold mb-10 text-black text-center">
         Improve your brand performance.
       </h1>
@@ -37,7 +64,7 @@ export default function Contact() {
         and grow your business.
       </h2>
       <div className="flex flex-wrap items-start justify-center w-full max-w-5xl">
-        <div className="w-full md:w-1/2 p-4">
+        <div className="w-full md:w-1/2 p-4 my-10 bg-gray-200 rounded-md">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-lg font-medium text-black">
@@ -48,7 +75,7 @@ export default function Contact() {
                 name="name"
                 onChange={(e) => setEnteredName(e.target.value)}
                 value={enteredName}
-                className="mt-1 block w-full p-2 border border-black rounded-md"
+                className="mt-1 block w-full p-2 border border-gray-200 rounded-md"
                 required
               />
             </div>
@@ -61,7 +88,7 @@ export default function Contact() {
                 name="email"
                 value={enteredEmail}
                 onChange={(e) => setEnteredEmail(e.target.value)}
-                className="mt-1 block w-full p-2 rounded-md border border-black"
+                className="mt-1 block w-full p-2 rounded-md border border-gray-200"
                 required
               />
             </div>
@@ -74,7 +101,7 @@ export default function Contact() {
                 name="phone"
                 value={enteredPhone}
                 onChange={(e) => setEnteredPhone(e.target.value)}
-                className="mt-1 block w-full p-2 rounded-md border border-black"
+                className="mt-1 block w-full p-2 rounded-md border border-gray-200"
                 required
               />
             </div>
@@ -86,20 +113,22 @@ export default function Contact() {
                 name="message"
                 value={enteredMessage}
                 onChange={(e) => setEnteredMessage(e.target.value)}
-                className="mt-1 block w-full p-2 border border-black rounded-md"
+                className="mt-1 block w-full p-2 border border-gray-200 rounded-md"
                 rows="4"
                 required
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded-md"
-            >
-              Submit
-            </button>
+            <div className="items-center justify-center text-center ">
+              <button
+                type="submit"
+                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md"
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </div>
-        <div className="w-full md:w-1/2 p-4 flex items-center justify-center">
+        {/* <div className="w-full md:w-1/2 p-4 flex items-center justify-center">
           <Image
             src="/office.webp" // Ensure the path is correct
             alt="Office image"
@@ -107,7 +136,7 @@ export default function Contact() {
             height={500}
             className="rounded-md"
           />
-        </div>
+        </div> */}
       </div>
       <p className="mt-4 text-center">
         Prefer a call? No problem. In case we cannot answer the phone, use the
