@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
 
 function MessageComponent() {
   const [messages, setMessages] = useState([]);
@@ -29,11 +30,7 @@ function MessageComponent() {
       <h1 className="text-4xl font-bold mb-8">Messages</h1>
       <div className="w-full max-w-5xl space-y-4">
         {isLoading ? (
-          <div className="flex items-center justify-center">
-            <div className="w-16 h-16 border-4 border-t-4 border-gray-200 rounded-full animate-spin">
-              <p className="text-xl">O</p>
-            </div>
-          </div>
+          <LoadingSpinner />
         ) : messages.length === 0 ? (
           <p>No messages found.</p>
         ) : (

@@ -1,26 +1,34 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 function HeroSection() {
   return (
-    <div className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden">
-      {' '}
-      {/* Changed bg-gray-50 to bg-black */}
-      <div className="absolute top-0 left-0 w-full h-full bg-white overflow-hidden">
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-red-500 transform -rotate-45 origin-top-left -translate-x-[100px] -translate-y-1/4"></div>
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-yellow-500 transform rotate-45 origin-bottom-right translate-x-1/4 translate-y-1/4"></div>
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gray-200"></div>
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage:
+          'url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)',
+      }}
+    >
+      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-content text-neutral-content text-center">
+        <div className="max-w-md">
+          <h1 className="mb-5 text-6xl font-extrabold tracking-tight text-nowrap">
+            Empower Your Brand
+          </h1>
+          <p className="mb-5 text-xl font-light">
+            Transform your business with cutting-edge advertising solutions.
+            Take your brand to new heights.
+          </p>
+          <Link
+            href={'/contact-us'}
+            className="btn btn-primary btn-lg font-semibold"
+          >
+            Start Your Journey
+          </Link>
+        </div>
       </div>
-      <section className="relative z-10 w-3/5 p-8 bg-white rounded-lg shadow-lg">
-        <h1 className="text-6xl mb-6 font-bold gap-3 space-y-2">
-          Today, business success is driven by beliefs.
-        </h1>
-        <p className="font-semibold">
-          Beliefs dictate how brands connect with people and why people connect
-          with brands. When the experiences for your customers and employees
-          connect with your organization’s true meaning and purpose, the result
-          is a brand people believe in and measurable business growth.
-        </p>
-      </section>
     </div>
   );
 }
