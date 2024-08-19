@@ -1,6 +1,6 @@
 function OurProcess() {
   return (
-    <div className="w-[100%]  from-gray-800 via-black to-gray-800 bg-gradient-to-r">
+    <div className="w-[100%]  bg-black">
       <div className="min-h-screen w-[80%] flex flex-col items-center justify-center gap-5  mx-auto ">
         <h1
           className="text-5xl font-bold self-start underline underline-offset-8 mb-6 ml-20 text-white"
