@@ -1,10 +1,9 @@
-import DigitalExperienceDesign from '@/app/our-solutions/digital-experience-design/page';
 import CardContainer from './CardContainer';
 import HeroSection from './HeroSection';
-import NavigationBar from './NavigationBar';
+import NavigationBar from './ui/NavigationBar';
 import OurProcess from './OurProcess';
 import OurWork from './OurWork';
-import BrandIdentity from '@/app/our-solutions/brand-identity/page';
+import Contact from './Contact';
 
 function LandingPage() {
   return (
@@ -13,6 +12,7 @@ function LandingPage() {
       <OurWork />
       <OurProcess />
       <CardContainer />
+      <Contact />
     </>
   );
 }

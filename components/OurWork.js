@@ -1,4 +1,4 @@
-import CustomerLogos from './CustomerLogos';
+import CustomerLogos from './ui/CustomerLogos';
 
 function OurWork() {
   return (

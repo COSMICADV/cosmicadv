@@ -56,15 +56,15 @@ export default function Contact() {
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen p-4">
       <Toaster />
-      <h1 className="text-6xl font-bold mb-10 text-black text-center">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-black text-center">
         Improve your brand performance.
       </h1>
-      <h2 className="text-xl mb-10 text-center">
-        Let’s talk about how we can make your brand stick out from the crowd,
-        and grow your business.
+      <h2 className="text-lg sm:text-xl md:text-2xl mb-10 text-center">
+        Let’s talk about how we can make your brand stick out from the crowd and
+        grow your business.
       </h2>
       <div className="flex flex-wrap items-start justify-center w-full max-w-5xl">
-        <div className="w-full md:w-1/2 p-4 my-10 bg-gray-200 rounded-md">
+        <div className="w-full md:w-1/2 p-4 my-10 bg-gray-200 rounded-md shadow-lg">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-lg font-medium text-black">
@@ -75,7 +75,7 @@ export default function Contact() {
                 name="name"
                 onChange={(e) => setEnteredName(e.target.value)}
                 value={enteredName}
-                className="mt-1 block w-full p-2 border border-gray-200 rounded-md"
+                className="mt-1 block w-full p-3 border border-gray-300 rounded-md"
                 required
               />
             </div>
@@ -88,7 +88,7 @@ export default function Contact() {
                 name="email"
                 value={enteredEmail}
                 onChange={(e) => setEnteredEmail(e.target.value)}
-                className="mt-1 block w-full p-2 rounded-md border border-gray-200"
+                className="mt-1 block w-full p-3 rounded-md border border-gray-300"
                 required
               />
             </div>
@@ -97,11 +97,11 @@ export default function Contact() {
                 Phone
               </label>
               <input
-                type="phone"
+                type="tel"
                 name="phone"
                 value={enteredPhone}
                 onChange={(e) => setEnteredPhone(e.target.value)}
-                className="mt-1 block w-full p-2 rounded-md border border-gray-200"
+                className="mt-1 block w-full p-3 rounded-md border border-gray-300"
                 required
               />
             </div>
@@ -113,21 +113,22 @@ export default function Contact() {
                 name="message"
                 value={enteredMessage}
                 onChange={(e) => setEnteredMessage(e.target.value)}
-                className="mt-1 block w-full p-2 border border-gray-200 rounded-md"
+                className="mt-1 block w-full p-3 border border-gray-300 rounded-md"
                 rows="4"
                 required
               ></textarea>
             </div>
-            <div className="items-center justify-center text-center ">
+            <div className="text-center">
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md"
+                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-all"
               >
                 Submit
               </button>
             </div>
           </form>
         </div>
+        {/* Uncomment and adjust the image section as needed */}
         {/* <div className="w-full md:w-1/2 p-4 flex items-center justify-center">
           <Image
             src="/office.webp" // Ensure the path is correct
@@ -138,7 +139,7 @@ export default function Contact() {
           />
         </div> */}
       </div>
-      <p className="mt-4 text-center">
+      <p className="mt-6 text-center">
         Prefer a call? No problem. In case we cannot answer the phone, use the
         email form for a callback request.
         <br />

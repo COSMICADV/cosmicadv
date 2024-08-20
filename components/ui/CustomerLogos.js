@@ -25,12 +25,14 @@ const CustomerLogos = () => {
       '/customerLogos/CocaCola.svg',
       '/customerLogos/HilipMorris.svg',
       '/customerLogos/NUXE.svg',
+      '/customerLogos/Columbus.svg',
     ],
     'Food & Beverage': [
       '/customerLogos/MasterFood.svg',
       '/customerLogos/TGI.svg',
       '/customerLogos/KC.svg',
       '/customerLogos/CocaCola.svg',
+      '/customerLogos/Columbus.svg',
     ],
     'Banking & Finance': ['/customerLogos/BlomBank.svg'],
     'Retail & Consumer Goods': [
@@ -44,24 +46,25 @@ const CustomerLogos = () => {
       '/customerLogos/BIODREMA.svg',
     ],
     Hospitality: ['/customerLogos/InterContinental.svg'],
-
     'Technology & Communications': ['/customerLogos/RAYA.svg'],
-    // Add more categories as needed
   };
 
   const [selectedIndustry, setSelectedIndustry] = useState('All');
 
   return (
-    <section className="py-16 bg-white min-w-[80%]">
+    <section className="py-14س bg-white w-full flex flex-col items-center">
       <div className="container mx-auto text-center">
-        <h2 className="text-[75px] font-bold mb-12" data-aos="fade-up">
-          Our areas of expertise
+        <h2
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12"
+          data-aos="fade-up"
+        >
+          Our Areas of Expertise
         </h2>
 
         {/* Industry Dropdown */}
         <div className="mb-8">
           <select
-            className="p-2 border border-gray-300 rounded"
+            className="p-2 border border-gray-300 rounded bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-150 ease-in-out"
             value={selectedIndustry}
             onChange={(e) => setSelectedIndustry(e.target.value)}
           >
@@ -73,24 +76,23 @@ const CustomerLogos = () => {
           </select>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {/* Grid for Logos */}
+        <div className="grid grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8">
           {logosByIndustry[selectedIndustry].map((logo, index) => {
-            // Determine the animation direction based on the row number
             const row = Math.floor(index / 4);
             const animation = row % 2 === 0 ? 'fade-right' : 'fade-left';
             return (
               <div
                 key={index}
-                className="flex justify-center items-center transition-transform transform hover:scale-110"
+                className="flex justify-center items-center transition-transform transform hover:scale-105"
                 data-aos={animation}
-                // data-aos-delay={`${index * 100}`}
               >
                 <Image
                   src={logo}
                   alt={`Logo ${index + 1}`}
-                  width={200}
-                  height={200}
-                  className="object-contain h-24"
+                  width={150}
+                  height={150}
+                  className="object-contain h-24 w-auto"
                 />
               </div>
             );
