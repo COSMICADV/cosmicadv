@@ -12,7 +12,6 @@ export default function Contact() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // Show loading toast
     const loadingToast = toast.loading('Sending...');
 
     try {
@@ -33,20 +32,15 @@ export default function Contact() {
         throw new Error('Something went wrong!');
       }
 
-      const result = await response.json();
-
-      // Show success toast
       toast.success('Message sent successfully!', {
         id: loadingToast,
       });
 
-      // Reset form fields
       setEnteredName('');
       setEnteredEmail('');
       setEnteredPhone('');
       setEnteredMessage('');
     } catch (error) {
-      // Show error toast
       toast.error('Failed to send message. Please try again.', {
         id: loadingToast,
       });
@@ -54,97 +48,101 @@ export default function Contact() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen p-4">
-      <Toaster />
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-black text-center">
-        Improve your brand performance.
-      </h1>
-      <h2 className="text-lg sm:text-xl md:text-2xl mb-10 text-center">
-        Let’s talk about how we can make your brand stick out from the crowd and
-        grow your business.
-      </h2>
-      <div className="flex flex-wrap items-start justify-center w-full max-w-5xl">
-        <div className="w-full md:w-1/2 p-4 my-10 bg-gray-200 rounded-md shadow-lg">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block text-lg font-medium text-black">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                onChange={(e) => setEnteredName(e.target.value)}
-                value={enteredName}
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-black">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={enteredEmail}
-                onChange={(e) => setEnteredEmail(e.target.value)}
-                className="mt-1 block w-full p-3 rounded-md border border-gray-300"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-black">
-                Phone
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={enteredPhone}
-                onChange={(e) => setEnteredPhone(e.target.value)}
-                className="mt-1 block w-full p-3 rounded-md border border-gray-300"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-black">
-                Message
-              </label>
-              <textarea
-                name="message"
-                value={enteredMessage}
-                onChange={(e) => setEnteredMessage(e.target.value)}
-                className="mt-1 block w-full p-3 border border-gray-300 rounded-md"
-                rows="4"
-                required
-              ></textarea>
-            </div>
-            <div className="text-center">
-              <button
-                type="submit"
-                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-all"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+    <div
+      className="min-h-screen flex flex-col items-center justify-center px-4 py-6 sm:px-8 sm:py-12 md:px-24 md:py-16 bg-white"
+      id="contact-me"
+    >
+      <div className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
+        <Toaster />
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-center text-gray-800">
+          Improve your brand performance
+        </h1>
+        <h2 className="text-lg sm:text-xl md:text-2xl mb-10 text-center text-gray-600">
+          Let’s talk about how we can make your brand stand out and grow your
+          business.
+        </h2>
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full md:w-1/2">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-lg font-medium text-gray-700">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  onChange={(e) => setEnteredName(e.target.value)}
+                  value={enteredName}
+                  className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-lg font-medium text-gray-700">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={enteredEmail}
+                  onChange={(e) => setEnteredEmail(e.target.value)}
+                  className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-lg font-medium text-gray-700">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={enteredPhone}
+                  onChange={(e) => setEnteredPhone(e.target.value)}
+                  className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-lg font-medium text-gray-700">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  value={enteredMessage}
+                  onChange={(e) => setEnteredMessage(e.target.value)}
+                  className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="w-full bg-purple-600 text-white py-3 px-6 rounded-md shadow-lg hover:bg-purple-700 transition-all duration-300 ease-in-out transform hover:scale-105"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <div className="hidden md:block w-1/2 p-4">
+            <Image
+              src="/office.webp"
+              alt="Office"
+              width={500}
+              height={500}
+              className="rounded-md shadow-lg"
+            />
+          </div>
         </div>
-        {/* Uncomment and adjust the image section as needed */}
-        {/* <div className="w-full md:w-1/2 p-4 flex items-center justify-center">
-          <Image
-            src="/office.webp" // Ensure the path is correct
-            alt="Office image"
-            width={500}
-            height={500}
-            className="rounded-md"
-          />
-        </div> */}
+        <p className="mt-6 text-center text-gray-600">
+          Prefer a call? No problem. In case we cannot answer the phone, use the
+          email form for a callback request.
+          <br />
+          +20 1000 581 080
+        </p>
       </div>
-      <p className="mt-6 text-center">
-        Prefer a call? No problem. In case we cannot answer the phone, use the
-        email form for a callback request.
-        <br />
-        +20 1000 581 080
-      </p>
     </div>
   );
 }

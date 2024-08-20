@@ -138,7 +138,7 @@ function NavigationBar() {
           </li>
           <li>
             <Link
-              href="/contact-us"
+              href="#contact-me"
               className={
                 'bg-black text-white font-bold p-3 transition-all rounded-md px-2 hover:bg-opacity-85'
               }
@@ -209,7 +209,7 @@ function NavigationBar() {
               </li>
               <li className="py-2">
                 <Link
-                  href="/contact-us"
+                  href="#contact-me"
                   className="block text-center bg-black text-white font-bold p-3 rounded-md hover:bg-opacity-85"
                   onClick={toggleMobileMenu}
                 >
