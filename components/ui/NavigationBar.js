@@ -48,6 +48,10 @@ function NavigationBar() {
     setIsMobileMenuOpen((prev) => !prev);
   };
 
+  const getLink = (anchor) => {
+    return pathName === '/' ? `#${anchor}` : `/#${anchor}`;
+  };
+
   return (
     <header
       className={`z-50 bg-white text-black p-4 sticky top-0 transition-opacity duration-300 ${
@@ -66,7 +70,6 @@ function NavigationBar() {
           </Link>
         </div>
 
-        {/* Hamburger Menu Icon */}
         <div className="md:hidden flex items-center">
           <button
             className={`transition-transform transform ${
@@ -105,7 +108,6 @@ function NavigationBar() {
           </button>
         </div>
 
-        {/* Links for larger screens */}
         <ul className="hidden md:flex space-x-7 py-2 justify-center items-center">
           <li>
             <Link href="/" className={pathName === '/' ? active : inActive}>
@@ -114,41 +116,27 @@ function NavigationBar() {
           </li>
           <li>
             <Link
-              href="/our-solutions"
-              className={pathName === '/our-solutions' ? active : inActive}
+              href={getLink('services')}
+              className={pathName === '#services' ? active : inActive}
             >
               Solutions
             </Link>
           </li>
           <li>
+            <Link href={getLink('contact-me')} className={inActive}>
+              Contact Us
+            </Link>
+          </li>
+          <li>
             <Link
-              href="about-us"
+              href="/about-us"
               className={pathName === '/about-us' ? active : inActive}
             >
               About Us
             </Link>
           </li>
-          <li>
-            <Link
-              href="/messages"
-              className={pathName === '/messages' ? active : inActive}
-            >
-              Messages
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#contact-me"
-              className={
-                'bg-black text-white font-bold p-3 transition-all rounded-md px-2 hover:bg-opacity-85'
-              }
-            >
-              Contact Us
-            </Link>
-          </li>
         </ul>
 
-        {/* Dropdown Menu for mobile */}
         <Transition
           show={isMobileMenuOpen}
           enter="transition ease-out duration-300 transform"
@@ -176,9 +164,9 @@ function NavigationBar() {
               </li>
               <li className="py-2">
                 <Link
-                  href="/our-solutions"
+                  href={getLink('services')}
                   className={`block text-center ${
-                    pathName === '/our-solutions' ? active : inActive
+                    pathName === '#services' ? active : inActive
                   }`}
                   onClick={toggleMobileMenu}
                 >
@@ -187,7 +175,7 @@ function NavigationBar() {
               </li>
               <li className="py-2">
                 <Link
-                  href="about-us"
+                  href="/about-us"
                   className={`block text-center ${
                     pathName === '/about-us' ? active : inActive
                   }`}
@@ -198,19 +186,10 @@ function NavigationBar() {
               </li>
               <li className="py-2">
                 <Link
-                  href="/messages"
+                  href={getLink('contact-me')}
                   className={`block text-center ${
-                    pathName === '/messages' ? active : inActive
+                    pathName === '#services' ? active : inActive
                   }`}
-                  onClick={toggleMobileMenu}
-                >
-                  Messages
-                </Link>
-              </li>
-              <li className="py-2">
-                <Link
-                  href="#contact-me"
-                  className="block text-center bg-black text-white font-bold p-3 rounded-md hover:bg-opacity-85"
                   onClick={toggleMobileMenu}
                 >
                   Contact Us
