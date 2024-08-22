@@ -1,21 +1,24 @@
 import { MongoClient } from 'mongodb';
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer'; // Make sure this import statement is correct
 
 export async function POST(req) {
   try {
     const { email, name, message, phone } = await req.json();
 
+    // Validate input
     if (!email || !email.includes('@') || !name.trim() || !message.trim()) {
       return NextResponse.json({ message: 'Invalid input' }, { status: 422 });
     }
 
     const newMessage = { email, name, phone, message };
 
+    // Connect to MongoDB
     let client;
     try {
       client = await MongoClient.connect(
-        'mongodb+srv://shabaan:XmnfZhRGFIezBw8y@cosmic.botjfdk.mongodb.net/'
+        `mongodb+srv://shabaan:${process.env.MONGO_PASSWORD}@cosmic.botjfdk.mongodb.net/`,
+        { useNewUrlParser: true, useUnifiedTopology: true }
       );
     } catch (e) {
       console.error('Database connection failed:', e);
@@ -25,6 +28,7 @@ export async function POST(req) {
       );
     }
 
+    // Store message in the database
     const db = client.db();
     try {
       const result = await db.collection('messages').insertOne(newMessage);
@@ -40,19 +44,28 @@ export async function POST(req) {
 
     client.close();
 
+    // Configure Nodemailer transporter
     let transporter;
     try {
       transporter = nodemailer.createTransport({
-        service: 'gmail', // or another email service
+        host: process.env.EMAIL_HOST,
+        port: 465, // SSL/TLS port
+        secure: true, // true for 465, false for other ports
         auth: {
-          user: 'a.shaban14617@gmail.com',
-          pass: 'vcxz mykh apnx kyue',
+          user: process.env.EMAIL_USERNAME,
+          pass: process.env.EMAIL_PASSWORD,
+        },
+        tls: {
+          rejectUnauthorized: false, // Optional: Use this if you're having issues with self-signed certificates
+        },
+        dnsLookup: (hostname, options, cb) => {
+          require('dns').lookup(hostname, { family: 4 }, cb); // Force IPv4
         },
       });
 
       const mailOptions = {
-        from: 'as6061907@gmail.com',
-        to: 'a.shaban14617@gmail.com',
+        from: process.env.EMAIL_USERNAME,
+        to: process.env.EMAIL_USERNAME,
         subject: `New Contact Form Submission from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`,
       };
@@ -66,6 +79,7 @@ export async function POST(req) {
       );
     }
 
+    // Return success response
     return NextResponse.json({
       message: 'Success',
       data: { email, name, phone, message },
