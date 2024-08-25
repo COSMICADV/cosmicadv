@@ -7,6 +7,7 @@ function HeroSection() {
     <section
       id="hero"
       className="relative min-h-screen bg-black text-white overflow-hidden"
+      style={{ overflowX: 'hidden' }} // Ensure no overflow on X-axis
     >
       {/* Background Image */}
 
