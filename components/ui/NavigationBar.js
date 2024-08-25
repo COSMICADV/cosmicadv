@@ -16,6 +16,7 @@ function NavigationBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('EN');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +51,11 @@ function NavigationBar() {
 
   const getLink = (anchor) => {
     return pathName === '/' ? `#${anchor}` : `/#${anchor}`;
+  };
+
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === 'EN' ? 'AR' : 'EN'));
+    // Here you can also add logic to change the actual language of the site
   };
 
   return (
@@ -137,6 +143,16 @@ function NavigationBar() {
           </li>
         </ul>
 
+        <div className="hidden md:block">
+          <button
+            onClick={toggleLanguage}
+            className="relative p-2 text-black font-semibold hover:text-gray-700 transition-all duration-300"
+          >
+            {language}
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black transform scale-x-0 hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></span>
+          </button>
+        </div>
+
         <Transition
           show={isMobileMenuOpen}
           enter="transition ease-out duration-300 transform"
@@ -194,6 +210,18 @@ function NavigationBar() {
                 >
                   Contact Us
                 </Link>
+              </li>
+              <li className="py-2 text-center">
+                <button
+                  onClick={() => {
+                    toggleLanguage();
+                    toggleMobileMenu();
+                  }}
+                  className="relative p-2 text-black font-semibold hover:text-gray-700 transition-all duration-300"
+                >
+                  {language}
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black transform scale-x-0 hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></span>
+                </button>
               </li>
             </ul>
           )}

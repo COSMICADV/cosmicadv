@@ -1,76 +1,84 @@
-import Image from 'next/image';
-
 function AboutPage() {
   return (
     <div className="min-h-screen bg-white p-8">
-      <div className="container mx-auto">
-        <h1 className="text-4xl font-bold  mb-12">About Us</h1>
+      <div className="container mx-auto max-w-4xl">
+        <h1 className="text-4xl font-bold text-center mb-12">About Us</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
-            <p className="mb-4">
-              Our mission is to provide exceptional services that help our
-              clients achieve their business goals. We strive for excellence in
-              every project we undertake, ensuring the highest level of
-              satisfaction for our clients.
-            </p>
-            <h2 className="text-2xl font-semibold mb-4">Our Values</h2>
-            <p>
-              We are committed to integrity, innovation, and quality. Our team
-              is dedicated to upholding these values in everything we do,
-              ensuring we deliver top-notch solutions to our clients.
+        <div className="space-y-8">
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">Our Story</h2>
+            <p className="leading-relaxed text-lg text-gray-700">
+              Since our founding in 1998, COSMiC Agency has been a regional
+              leader in creative solutions, serving businesses across the Middle
+              East. Our deep understanding of the local market, combined with
+              over two decades of experience, enables us to offer services that
+              are both innovative and tailored to the unique needs of our
+              clients.
             </p>
           </div>
-          <div className="flex justify-center items-center">
-            <Image
-              src="/office.webp"
-              width={500}
-              height={500}
-              alt="About Us Image"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
 
-        <div className="mt-12">
-          <h2 className="text-3xl font-semibold text-center mb-8">
-            Meet Our Team
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center text-center p-6 border rounded-lg shadow-md bg-white">
-              <Image
-                src="/path-to-team-member1.jpg"
-                width={150}
-                height={150}
-                alt="Team Member 1"
-                className="rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold">John Doe</h3>
-              <p className="text-gray-600">CEO</p>
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">Our Expertise</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900">
+                  Creative Design
+                </h3>
+                <p className="leading-relaxed text-lg text-gray-700">
+                  We believe in the power of creativity to transform brands. Our
+                  team of experienced designers works closely with clients to
+                  craft visually stunning and strategically sound designs that
+                  resonate with their target audiences.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900">
+                  Digital Marketing
+                </h3>
+                <p className="leading-relaxed text-lg text-gray-700">
+                  In the digital age, staying connected with your audience is
+                  key. Our digital marketing strategies are designed to amplify
+                  your brand's presence online, driving engagement and
+                  delivering measurable results.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900">
+                  Event Management
+                </h3>
+                <p className="leading-relaxed text-lg text-gray-700">
+                  From concept to execution, we manage every aspect of your
+                  event to ensure a seamless experience. Whether it's a
+                  corporate event, product launch, or a brand activation, we
+                  bring your vision to life with precision and flair.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900">
+                  Digital Print Division
+                </h3>
+                <p className="leading-relaxed text-lg text-gray-700">
+                  Quality is at the heart of everything we do. Our in-house
+                  digital print division ensures that all your printed materials
+                  meet the highest standards, from business cards to large-scale
+                  banners.
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col items-center text-center p-6 border rounded-lg shadow-md bg-white">
-              <Image
-                src="/path-to-team-member2.jpg"
-                width={150}
-                height={150}
-                alt="Team Member 2"
-                className="rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold">Jane Smith</h3>
-              <p className="text-gray-600">CTO</p>
-            </div>
-            <div className="flex flex-col items-center text-center p-6 border rounded-lg shadow-md bg-white">
-              <Image
-                src="/path-to-team-member3.jpg"
-                width={150}
-                height={150}
-                alt="Team Member 3"
-                className="rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold">Alice Johnson</h3>
-              <p className="text-gray-600">COO</p>
-            </div>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">Why Choose Us?</h2>
+            <p className="leading-relaxed text-lg text-gray-700">
+              With over 25 years of experience, COSMiC has built a reputation
+              for excellence and innovation. Our multidisciplinary team is
+              dedicated to helping your business succeed by providing tailored
+              solutions that meet your unique needs.
+            </p>
+            <p className="leading-relaxed text-lg text-gray-700 mt-4">
+              At COSMiC, we don’t just create; we elevate. Let us help you take
+              your brand to the next level.
+            </p>
           </div>
         </div>
       </div>
