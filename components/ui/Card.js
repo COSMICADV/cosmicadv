@@ -13,7 +13,7 @@ function Card({ image, title, description, points }) {
     <div
       className="w-full max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
       data-aos="fade-up"
-      style={{ height: '550px' }} // تحديد ارتفاع ثابت للبطاقة
+      style={{ height: '550px' }}
     >
       <div className="relative">
         <Image
@@ -36,12 +36,11 @@ function Card({ image, title, description, points }) {
             <input type="checkbox" className="peer" />
             <div className="collapse-title text-lg font-medium text-center py-4">
               {' '}
-              {/* زيادة الحشو الرأسي */}
               Learn More
             </div>
             <div
-              className="collapse-content overflow-auto py-2" // زيادة الحشو الرأسي للمحتوى
-              style={{ maxHeight: '150px' }} // تحديد ارتفاع محتوى الكولابس
+              className="collapse-content overflow-auto py-2"
+              style={{ maxHeight: '150px' }}
             >
               <ul className="list-disc list-inside pb-2">
                 {points.map((point, index) => (

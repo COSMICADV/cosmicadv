@@ -38,7 +38,7 @@ function AboutPage() {
                 <p className="leading-relaxed text-lg text-gray-700">
                   In the digital age, staying connected with your audience is
                   key. Our digital marketing strategies are designed to amplify
-                  your brand's presence online, driving engagement and
+                  your brand&apos;s presence online, driving engagement and
                   delivering measurable results.
                 </p>
               </div>
@@ -48,7 +48,7 @@ function AboutPage() {
                 </h3>
                 <p className="leading-relaxed text-lg text-gray-700">
                   From concept to execution, we manage every aspect of your
-                  event to ensure a seamless experience. Whether it's a
+                  event to ensure a seamless experience. Whether it&apos;s a
                   corporate event, product launch, or a brand activation, we
                   bring your vision to life with precision and flair.
                 </p>
@@ -76,8 +76,8 @@ function AboutPage() {
               solutions that meet your unique needs.
             </p>
             <p className="leading-relaxed text-lg text-gray-700 mt-4">
-              At COSMiC, we don’t just create; we elevate. Let us help you take
-              your brand to the next level.
+              At COSMiC,We don&apos;t just create; we elevate. Let us help you
+              take your brand to the next level.
             </p>
           </div>
         </div>
