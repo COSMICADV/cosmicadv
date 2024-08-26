@@ -10,7 +10,7 @@ function LandingPage() {
     <>
       <HeroSection />
       <OurWork />
-      <OurProcess />
+      {/* <OurProcess /> */}
       <CardContainer />
       <Contact />
     </>
