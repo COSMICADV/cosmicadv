@@ -33,3 +33,9 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+@font-face {
+  font-family: 'Eurostile Becker Heavy';
+  src: url('/fonts/EurostileBeckerHeavyRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

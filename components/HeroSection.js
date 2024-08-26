@@ -5,16 +5,18 @@ function HeroSection() {
     <section
       id="hero"
       className="relative min-h-screen bg-black text-white overflow-hidden"
-      style={{ overflowX: 'hidden' }} // Ensure no overflow on X-axis
+      style={{ overflowX: 'hidden' }}
     >
       {/* Hero Content */}
-      <div className="relative flex items-center justify-center min-h-screen px-4 py-8">
-        <div className="text-center mx-auto z-10 ">
+      <div className="relative flex items-center justify-center min-h-screen px-4 py-16 shadow-sm">
+        {' '}
+        {/* Increased padding */}
+        <div className="text-center mx-auto z-10">
           <h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-[120px] font-extrabold tracking-tight mb-6"
             style={{
-              fontFamily: 'Poppins, sans-serif',
-              lineHeight: '1.2', // Adjust line height for vertical space
+              fontFamily: 'Eurostile Becker Heavy, sans-serif',
+              lineHeight: '1.2',
             }}
           >
             <span>

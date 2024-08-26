@@ -26,6 +26,9 @@ const CustomerLogos = () => {
       '/customerLogos/HilipMorris.svg',
       '/customerLogos/NUXE.svg',
       '/customerLogos/Columbus.svg',
+      '/customerLogos/KFC.svg',
+      '/customerLogos/PizzaHut.svg',
+      '/customerLogos/Dominos.svg',
     ],
     'Food & Beverage': [
       '/customerLogos/MasterFood.svg',
@@ -52,7 +55,7 @@ const CustomerLogos = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
 
   return (
-    <section className="py-14س bg-white w-full flex flex-col items-center">
+    <section className="py-44 bg-white w-full flex flex-col items-center mt-10">
       <div className="container mx-auto text-center">
         <h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12"
