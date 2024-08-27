@@ -36,6 +36,9 @@ const CustomerLogos = () => {
       '/customerLogos/KC.svg',
       '/customerLogos/CocaCola.svg',
       '/customerLogos/Columbus.svg',
+      '/customerLogos/KFC.svg',
+      '/customerLogos/PizzaHut.svg',
+      '/customerLogos/Dominos.svg',
     ],
     'Banking & Finance': ['/customerLogos/BlomBank.svg'],
     'Retail & Consumer Goods': [

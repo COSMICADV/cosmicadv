@@ -4,7 +4,7 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-black text-white overflow-hidden"
+      className="relative min-h-screen bg-white text-black overflow-hidden"
       style={{ overflowX: 'hidden' }}
     >
       {/* Hero Content */}
