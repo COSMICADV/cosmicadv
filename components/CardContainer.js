@@ -75,9 +75,11 @@ function CardContainer() {
   }, []);
 
   return (
-    <section className="py-36 px-4 bg-gray-100 min-h-screen" id="services">
+    <section className="py-24 px-4 bg-gray-100 min-h-screen" id="services">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">Solutions</h1>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-center text-gray-800">
+          Solutions
+        </h1>
         <div className="flex flex-wrap justify-center gap-8">
           <Card
             image={'/cardImages/DigitalMarketing2.svg'}

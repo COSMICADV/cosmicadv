@@ -9,7 +9,9 @@ function AboutUs() {
   return (
     <div className="min-h-screen bg-white p-8" id="aboutus">
       <div className="container mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold text-center mb-16">About Us</h1>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-center text-gray-800">
+          About Us
+        </h1>
 
         {/* Our Story Card */}
         <div className="mb-12 p-8 bg-white rounded-lg">

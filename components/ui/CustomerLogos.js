@@ -60,12 +60,9 @@ const CustomerLogos = () => {
   return (
     <section className="py-44 bg-white w-full flex flex-col items-center mt-10">
       <div className="container mx-auto text-center">
-        <h2
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12"
-          data-aos="fade-up"
-        >
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-center text-gray-800">
           Our Areas of Expertise
-        </h2>
+        </h1>
 
         {/* Industry Dropdown */}
         <div className="mb-8">
