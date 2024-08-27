@@ -51,15 +51,15 @@ export default function Contact() {
       className="min-h-screen flex flex-col items-center justify-center px-4 py-6 sm:px-8 sm:py-12 md:px-24 md:py-16 bg-white"
       id="contact-me"
     >
-      <div className="w-full max-w-xl p-8 bg-white rounded-lg shadow-xl">
+      <div className="w-full max-w-xl p-8 bg-white rounded-lg">
         <Toaster />
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-center text-gray-800">
-          Improve your brand performance
+          Contact Us
         </h1>
-        <h2 className="text-lg sm:text-xl md:text-2xl mb-10 text-center text-gray-600">
+        {/* <h2 className="text-lg sm:text-xl md:text-2xl mb-10 text-center text-gray-600">
           Let’s talk about how we can make your brand stand out and grow your
           business.
-        </h2>
+        </h2> */}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-lg font-medium text-gray-700">
@@ -70,7 +70,7 @@ export default function Contact() {
               name="name"
               onChange={(e) => setEnteredName(e.target.value)}
               value={enteredName}
-              className="mt-1 block w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
+              className="mt-1 block w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
               required
             />
           </div>
@@ -83,7 +83,7 @@ export default function Contact() {
               name="email"
               value={enteredEmail}
               onChange={(e) => setEnteredEmail(e.target.value)}
-              className="mt-1 block w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
+              className="mt-1 block w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
               required
             />
           </div>
@@ -96,7 +96,7 @@ export default function Contact() {
               name="phone"
               value={enteredPhone}
               onChange={(e) => setEnteredPhone(e.target.value)}
-              className="mt-1 block w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
+              className="mt-1 block w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
               required
             />
           </div>
@@ -108,7 +108,7 @@ export default function Contact() {
               name="message"
               value={enteredMessage}
               onChange={(e) => setEnteredMessage(e.target.value)}
-              className="mt-1 block w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
+              className="mt-1 block w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
               rows="4"
               required
             ></textarea>
@@ -116,7 +116,7 @@ export default function Contact() {
           <div className="text-center">
             <button
               type="submit"
-              className="w-full bg-black text-white py-4 rounded-md shadow-lg hover:bg-gray-900 transition-all duration-300 ease-in-out transform hover:scale-105"
+              className="w-full bg-black text-white py-4 rounded-md  hover:bg-gray-900 transition-all duration-300 ease-in-out transform hover:scale-105"
             >
               Submit
             </button>

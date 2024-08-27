@@ -80,7 +80,7 @@ function CardContainer() {
         <h1 className="text-4xl font-bold text-center mb-12">Solutions</h1>
         <div className="flex flex-wrap justify-center gap-8">
           <Card
-            image={'/cardImages/DigitalMarketing1.svg'}
+            image={'/cardImages/DigitalMarketing2.svg'}
             title="Digital Marketing"
             description="Elevate your brand with impactful, accessible messages that drive audience engagement and encourage meaningful action."
             points={[
@@ -101,7 +101,7 @@ function CardContainer() {
           />
           <Card
             image={'/cardImages/CODE.svg'}
-            title="Software Development Services"
+            title="CODES"
             description="Custom software solutions to drive your business forward. We deliver scalable, secure, and efficient applications and integrations tailored to your unique needs."
             points={[
               'Custom software development.',
@@ -110,7 +110,7 @@ function CardContainer() {
             ]}
           />
           <Card
-            image={'/cardImages/DigitalPrining.svg'}
+            image={'/cardImages/DigitalPrining2.svg'}
             title="Digital Print"
             description="We print large or very small high quality low cost with a quick reliable ‭& ‬honest service‭."
             points={[

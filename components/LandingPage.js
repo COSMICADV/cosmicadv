@@ -3,14 +3,16 @@ import HeroSection from './HeroSection';
 import OurProcess from './OurProcess';
 import OurWork from './OurWork';
 import Contact from './Contact';
+import AboutUs from './ui/AboutUs';
 
 function LandingPage() {
   return (
     <>
       <HeroSection />
-      <OurWork />
-      {/* <OurProcess /> */}
       <CardContainer />
+      <OurWork />
+      <AboutUs />
+      {/* <OurProcess /> */}
       <Contact />
     </>
   );
