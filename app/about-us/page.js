@@ -82,7 +82,7 @@
 //           </p>
 //           <p className="text-lg text-gray-700 leading-relaxed mt-4">
 //             At COSMiC, we don&apos;t just create; we elevate. Let us help you
-//             take your brand to the next level.
+//             take your brand to sdfthe next level.
 //           </p>
 //         </div>
 //       </div>
