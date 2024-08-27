@@ -15,7 +15,7 @@ function CardContainer() {
         <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
         <div className="flex flex-wrap justify-center gap-8">
           <Card
-            image={'/cardImages/Card_img_Identity.webp'}
+            image={'/cardImages/Digital_Marketing.webp'}
             title="Digital Marketing"
             description="Elevate your brand with impactful, accessible messages that drive audience engagement and encourage meaningful action."
             points={[
@@ -25,7 +25,7 @@ function CardContainer() {
             ]}
           />
           <Card
-            image={'/cardImages/Card_img_Strategy.webp'}
+            image={'/cardImages/CreativeDesign.webp'}
             title="Brand Identity"
             description="Brand identity design, tone-of-voice, and design systems that capture the essence of your company and culture."
             points={[
@@ -35,7 +35,7 @@ function CardContainer() {
             ]}
           />
           <Card
-            image={'/cardImages/Card_img_UX.webp'}
+            image={'/cardImages/Branding.webp'}
             title="Digital Experience Design"
             description="Tailored digital experiences to meet your audience’s needs. From websites to apps, we enhance and distinguish your offering with empathy and thorough research."
             points={[
