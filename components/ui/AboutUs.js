@@ -1,10 +1,4 @@
-import {
-  FaBullhorn,
-  FaCalendarAlt,
-  FaPaintBrush,
-  FaPrint,
-} from 'react-icons/fa';
-
+'use client';
 function AboutUs() {
   return (
     <div className="min-h-screen bg-white p-8" id="aboutus">
