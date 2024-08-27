@@ -80,7 +80,7 @@ function CardContainer() {
         <h1 className="text-4xl font-bold text-center mb-12">Solutions</h1>
         <div className="flex flex-wrap justify-center gap-8">
           <Card
-            image={'/cardImages/DigitalMarketing.svg'}
+            image={'/cardImages/DigitalMarketing1.svg'}
             title="Digital Marketing"
             description="Elevate your brand with impactful, accessible messages that drive audience engagement and encourage meaningful action."
             points={[
