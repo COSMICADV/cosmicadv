@@ -427,17 +427,6 @@ function NavigationBar() {
 
               <li className="py-2">
                 <Link
-                  href={getLink('contact-me')}
-                  className={`block text-center ${
-                    pathName === '#services' ? active : inActive
-                  }`}
-                  onClick={toggleMobileMenu}
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li className="py-2">
-                <Link
                   href="#aboutus"
                   className={`block text-center ${
                     pathName === '#aboutus' ? active : inActive
@@ -445,6 +434,17 @@ function NavigationBar() {
                   onClick={toggleMobileMenu}
                 >
                   About Us
+                </Link>
+              </li>
+              <li className="py-2">
+                <Link
+                  href={getLink('contact-me')}
+                  className={`block text-center ${
+                    pathName === '#services' ? active : inActive
+                  }`}
+                  onClick={toggleMobileMenu}
+                >
+                  Contact Us
                 </Link>
               </li>
               <li className="py-2 text-center">
