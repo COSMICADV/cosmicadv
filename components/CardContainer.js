@@ -44,6 +44,16 @@ function CardContainer() {
               'Responsive and adaptive designs.',
             ]}
           />
+          <Card
+            image={'/cardImages/CODE.webp'}
+            title="Software Development Services"
+            description="Custom software solutions to drive your business forward. We deliver scalable, secure, and efficient applications and integrations tailored to your unique needs."
+            points={[
+              'Custom software development.',
+              'Scalable and secure systems.',
+              'Seamless integrations and automation.',
+            ]}
+          />
         </div>
       </div>
     </section>

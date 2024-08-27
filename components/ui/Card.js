@@ -13,7 +13,7 @@ function Card({ image, title, description, points }) {
     <div
       className="w-full max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
       data-aos="fade-up"
-      style={{ height: '550px' }}
+      style={{ height: '600px' }}
     >
       <div className="relative">
         <Image
@@ -21,7 +21,7 @@ function Card({ image, title, description, points }) {
           alt={title}
           width={400}
           height={300}
-          className="object-cover w-full h-48"
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="p-6 flex flex-col justify-between h-full">
