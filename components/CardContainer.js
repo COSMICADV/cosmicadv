@@ -12,10 +12,10 @@ function CardContainer() {
   return (
     <section className="py-36 px-4 bg-gray-100 min-h-screen" id="services">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
+        <h1 className="text-4xl font-bold text-center mb-12">Solutions</h1>
         <div className="flex flex-wrap justify-center gap-8">
           <Card
-            image={'/cardImages/Digital_Marketing.webp'}
+            image={'/cardImages/Digital_Marketing.svg'}
             title="Digital Marketing"
             description="Elevate your brand with impactful, accessible messages that drive audience engagement and encourage meaningful action."
             points={[
@@ -34,18 +34,23 @@ function CardContainer() {
               'Create a memorable identity.',
             ]}
           />
+          <a href="http://digitalprintegypt.com/" target="_blank">
+            <Card
+              image={'/cardImages/DigitalPrining.svg'}
+              title="digitalprintegypt.com"
+              description="WE PRINT EVERYTHING
+            We say that not because we're good at printing pretty much everything, but we've gathered years
+            of knowledge and can help you decide the best way to bring your work to life!
+            "
+              points={[
+                'In&Ourdoor Printing',
+                'Digital Printing',
+                'MUGS, T-SHIRTS,BAGS & MORE',
+              ]}
+            />
+          </a>
           <Card
-            image={'/cardImages/Branding.webp'}
-            title="Digital Experience Design"
-            description="Tailored digital experiences to meet your audience’s needs. From websites to apps, we enhance and distinguish your offering with empathy and thorough research."
-            points={[
-              'User-centered design approach.',
-              'Seamless user experience.',
-              'Responsive and adaptive designs.',
-            ]}
-          />
-          <Card
-            image={'/cardImages/CODE.webp'}
+            image={'/cardImages/CODE.svg'}
             title="Software Development Services"
             description="Custom software solutions to drive your business forward. We deliver scalable, secure, and efficient applications and integrations tailored to your unique needs."
             points={[

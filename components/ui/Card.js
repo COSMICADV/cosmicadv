@@ -13,7 +13,7 @@ function Card({ image, title, description, points }) {
     <div
       className="w-full max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
       data-aos="fade-up"
-      style={{ height: '600px' }}
+      style={{ height: '650px' }}
     >
       <div className="relative">
         <Image
@@ -40,7 +40,7 @@ function Card({ image, title, description, points }) {
             </div>
             <div
               className="collapse-content overflow-auto py-2"
-              style={{ maxHeight: '150px' }}
+              style={{ maxHeight: '200px' }}
             >
               <ul className="list-disc list-inside pb-2">
                 {points.map((point, index) => (
