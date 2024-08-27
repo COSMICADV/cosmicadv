@@ -115,7 +115,7 @@ function Footer() {
             />
             <div className="flex flex-col items-center">
               <ul className="py-2 text-center">
-                <li className="my-2 text-lg">New Caito, Cairo, Egypt</li>
+                <li className="my-2 text-lg">New Cairo, Cairo, Egypt</li>
                 <li className="my-2 text-lg">
                   <a
                     href="tel:+201000581080"
