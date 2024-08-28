@@ -302,7 +302,7 @@ function NavigationBar() {
         <div className="text-xl font-bold">
           <Link href="/">
             <Image
-              src="/COSMIC.svg"
+              src="/COSMICLogo.svg"
               width={150}
               height={100}
               alt="Picture of the author"
