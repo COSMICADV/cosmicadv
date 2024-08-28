@@ -45,7 +45,28 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Eurostile Bold';
+  src: url('/fonts/eurostile-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 body {
   font-family: 'Eurostile Becker', sans-serif;
+}
+@font-face {
+  font-family: 'Eurostile Regular';
+  src: url('/fonts/eurostileRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Eurostile Regular', sans-serif;
+  font-weight: bold; /* Apply bold to make it bold but not extra bold */
 }

@@ -23,22 +23,26 @@ const CustomerLogos = () => {
       '/customerLogos/RAYA.svg',
       '/customerLogos/BIODREMA.svg',
       '/customerLogos/CocaCola.svg',
+      '/customerLogos/PizzaHut.svg',
       '/customerLogos/HilipMorris.svg',
       '/customerLogos/NUXE.svg',
       '/customerLogos/Columbus.svg',
       '/customerLogos/KFC.svg',
-      '/customerLogos/PizzaHut.svg',
       '/customerLogos/Dominos.svg',
+      '/customerLogos/Beyti.svg',
+      '/customerLogos/Pickl.svg',
     ],
     'Food & Beverage': [
       '/customerLogos/MasterFood.svg',
       '/customerLogos/TGI.svg',
+      '/customerLogos/KFC.svg',
+      '/customerLogos/PizzaHut.svg',
       '/customerLogos/KC.svg',
       '/customerLogos/CocaCola.svg',
       '/customerLogos/Columbus.svg',
-      '/customerLogos/KFC.svg',
-      '/customerLogos/PizzaHut.svg',
       '/customerLogos/Dominos.svg',
+      '/customerLogos/Pickl.svg',
+      '/customerLogos/Beyti.svg',
     ],
     'Banking & Finance': ['/customerLogos/BlomBank.svg'],
     'Retail & Consumer Goods': [
@@ -80,7 +84,7 @@ const CustomerLogos = () => {
         </div>
 
         {/* Grid for Logos */}
-        <div className="grid grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8">
           {logosByIndustry[selectedIndustry].map((logo, index) => {
             const row = Math.floor(index / 4);
             const animation = row % 2 === 0 ? 'fade-right' : 'fade-left';
