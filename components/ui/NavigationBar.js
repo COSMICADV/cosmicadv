@@ -302,7 +302,7 @@ function NavigationBar() {
         <div className="text-xl font-bold">
           <Link href="/">
             <Image
-              src="/COSMIClogo.svg"
+              src="/COSMIC.svg"
               width={150}
               height={100}
               alt="COSMIC ADV"
