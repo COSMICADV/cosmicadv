@@ -305,7 +305,7 @@ function NavigationBar() {
               src="/COSMICLogo.svg"
               width={150}
               height={100}
-              alt="Picture of the author"
+              alt="COSMIC ADV"
             />
           </Link>
         </div>
