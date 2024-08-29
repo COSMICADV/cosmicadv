@@ -175,7 +175,7 @@ function Footer() {
           <p className="text-sm md:text-base">
             &copy; {new Date().getFullYear()} COSMIC ADV. All rights reserved.
           </p>
-          <p className="text-sm md:text-base">Tax No: 37-690-510</p>
+          <p className="text-sm md:text-base">TaxNo.: 337-690-510</p>
         </div>
       </div>
     </footer>
