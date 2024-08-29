@@ -48,7 +48,6 @@ const CustomerLogos = () => {
     'Banking & Finance': ['/customerLogos/BlomBank.svg'],
     'Retail & Consumer Goods': [
       '/customerLogos/Virgin.svg',
-      '/customerLogos/BIODREMA.svg',
       '/customerLogos/RAYA.svg',
     ],
     'Healthcare & Pharmaceuticals': [
