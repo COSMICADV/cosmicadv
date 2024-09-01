@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Projects',
+  description: 'Heavy Load Project With multinational Comapanies',
+};
+
 function Projects() {
   return (
     <div className="min-h-screen">
