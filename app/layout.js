@@ -12,11 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta
           name="google-site-verification"
           content="po4duazFj70cHD1Lw-3gVwbYVlNRjWw_VDJ-hTPDe_8"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body>
         <NavigationBar />
