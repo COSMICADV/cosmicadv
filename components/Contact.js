@@ -2,6 +2,13 @@
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
+export const metadata = {
+  title: 'COSMIC ADV Solutions',
+  description: 'Experienced Company For Advertising Solutions',
+  verification: {
+    'google-site-verification': 'po4duazFj70cHD1Lw-3gVwbYVlNRjWw_VDJ-hTPDe_8',
+  },
+};
 export default function Contact() {
   const [enteredName, setEnteredName] = useState('');
   const [enteredEmail, setEnteredEmail] = useState('');
