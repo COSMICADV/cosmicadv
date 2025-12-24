@@ -31,6 +31,9 @@ const CustomerLogos = () => {
       '/customerLogos/Dominos.svg',
       '/customerLogos/Beyti.svg',
       '/customerLogos/Pickl.svg',
+      '/customerLogos/PAO.svg',
+      '/customerLogos/aven.svg',
+      '/customerLogos/uriage.svg',
     ],
     'Food & Beverage': [
       '/customerLogos/MasterFood.svg',
@@ -44,6 +47,7 @@ const CustomerLogos = () => {
       '/customerLogos/Pickl.svg',
       '/customerLogos/Beyti.svg',
       '/customerLogos/Costa.svg',
+      '/customerLogos/PAO.svg',
     ],
     'Banking & Finance': ['/customerLogos/BlomBank.svg'],
     'Retail & Consumer Goods': [
@@ -55,6 +59,8 @@ const CustomerLogos = () => {
       '/customerLogos/BIODREMA.svg',
       '/customerLogos/NUXE.svg',
       '/customerLogos/Loreal.svg',
+      '/customerLogos/aven.svg',
+      '/customerLogos/uriage.svg',
     ],
     Hospitality: ['/customerLogos/InterContinental.svg'],
     'Technology & Communications': ['/customerLogos/RAYA.svg'],
