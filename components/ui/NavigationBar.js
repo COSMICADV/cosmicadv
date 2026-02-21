@@ -294,7 +294,7 @@ function NavigationBar() {
 
   return (
     <header
-      className={`z-50 bg-white text-black p-4 fixed top-0 left-0 right-0 transition-opacity duration-300 ${
+      className={`z-50 bg-white text-black p-4 fixed top-0 left-0 right-0 transition-opacity duration-300 mb-24 ${
         isScrolled ? 'opacity-75' : 'opacity-100'
       }`}
     >

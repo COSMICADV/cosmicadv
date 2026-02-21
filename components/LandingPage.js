@@ -4,6 +4,7 @@ import OurProcess from './OurProcess';
 import OurWork from './OurWork';
 import Contact from './Contact';
 import AboutUs from './ui/AboutUs';
+import ReviewsSection from './ReviewsSection';
 
 function LandingPage() {
   return (
@@ -12,6 +13,7 @@ function LandingPage() {
       <CardContainer />
       <OurWork />
       <AboutUs />
+      <ReviewsSection />
       {/* <OurProcess /> */}
       <Contact />
     </>
