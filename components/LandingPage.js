@@ -5,6 +5,7 @@ import OurWork from './OurWork';
 import Contact from './Contact';
 import AboutUs from './ui/AboutUs';
 import ReviewsSection from './ReviewsSection';
+import TeamSection from './TeamSection';
 
 function LandingPage() {
   return (
@@ -13,6 +14,7 @@ function LandingPage() {
       <CardContainer />
       <OurWork />
       <AboutUs />
+      <TeamSection />
       <ReviewsSection />
       {/* <OurProcess /> */}
       <Contact />
