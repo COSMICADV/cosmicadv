@@ -4,18 +4,24 @@ import Image from 'next/image';
 const teamMembers = [
   {
     name: 'Khaled',
-    role: 'CEO',
+    role: 'Mentor',
     image:
       'https://i.postimg.cc/5yChnrvz/Khaled-Mentor-jpg.jpg',
   },
   {
+    name: 'Shams',
+    role: 'Accounting',
+    image:
+      'https://i.postimg.cc/D0F4594T/black.jpg',
+  },
+  {
     name: 'Shaaban',
-    role: 'Developer',
+    role: 'Code',
     image: 'https://i.postimg.cc/wMmC0rJt/Ahmad-Code-jpg.jpg',
   },
   {
-    name: '',
-    role: 'Designer',
+    name: 'Kadri',
+    role: 'Design',
     image:
     'https://i.postimg.cc/x8zwtZHL/Ahmad-Design-jpg.jpg',
   },
@@ -27,25 +33,19 @@ const teamMembers = [
   },
   {
     name: 'Zyad',
-    role: 'Designer',
+    role: 'Design',
     image:
       'https://i.postimg.cc/7h2FmR77/Zyad-Digital-jpg.jpg',
   },
   {
     name: 'Fares',
-    role: 'Designer',
+    role: 'Design',
     image:
       'https://i.postimg.cc/d3yb4fdy/Fares-Design-jpg.jpg',
   },
   {
-    name: 'Farid',
-    role: 'Consultant',
-    image:
-      'https://i.postimg.cc/D0F4594T/black.jpg',
-  },
-  {
-    name: 'Khalil',
-    role: 'Production',
+    name: 'Salma',
+    role: 'Marketing',
     image:
       'https://i.postimg.cc/D0F4594T/black.jpg',
   },
@@ -86,7 +86,7 @@ function TeamSection() {
               </div>
               <div className="p-2 py-4 text-center">
                 <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                <p className="mt-1 text-sm text-slate-500">{member.role}</p>
+                <p className="mt-1 text-sm text-slate-500 font-normal">{member.role}</p>
               </div>
             </div>
           ))}

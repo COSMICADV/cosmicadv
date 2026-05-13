@@ -60,6 +60,28 @@ export default function AdminReviewsPage() {
     if (typeof window !== 'undefined') sessionStorage.setItem('adminReviewsPassword', password);
   };
 
+  const handleDelete = async (id) => {
+    if (!confirm('Permanently delete this review?')) return;
+    const pwd = storedPassword || (typeof window !== 'undefined' ? sessionStorage.getItem('adminReviewsPassword') : null);
+    if (!pwd) return;
+    try {
+      const res = await fetch(`/api/admin/reviews/${id}`, {
+        method: 'DELETE',
+        headers: API_HEADERS(pwd),
+      });
+      if (res.status === 401) {
+        setStoredPassword('');
+        if (typeof window !== 'undefined') sessionStorage.removeItem('adminReviewsPassword');
+        setLoginError('Session expired');
+        return;
+      }
+      if (!res.ok) throw new Error('Failed to delete');
+      await loadReviews();
+    } catch (e) {
+      setError(e.message);
+    }
+  };
+
   const handleApproveReject = async (id, status) => {
     const pwd = storedPassword || (typeof window !== 'undefined' ? sessionStorage.getItem('adminReviewsPassword') : null);
     if (!pwd) return;
@@ -176,6 +198,13 @@ export default function AdminReviewsPage() {
                         >
                           Reject
                         </button>
+                        <button
+                          type="button"
+                          onClick={() => handleDelete(r._id)}
+                          className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-black"
+                        >
+                          Delete
+                        </button>
                       </div>
                     </li>
                   ))}
@@ -200,17 +229,26 @@ export default function AdminReviewsPage() {
                         </span>
                         <p className="text-gray-600 text-sm mt-1 line-clamp-2">{r.words}</p>
                       </div>
-                      <span
-                        className={`px-2 py-1 rounded text-sm font-medium ${
-                          r.status === 'approved'
-                            ? 'bg-green-100 text-green-800'
-                            : r.status === 'rejected'
-                            ? 'bg-red-100 text-red-800'
-                            : 'bg-amber-100 text-amber-800'
-                        }`}
-                      >
-                        {r.status}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`px-2 py-1 rounded text-sm font-medium ${
+                            r.status === 'approved'
+                              ? 'bg-green-100 text-green-800'
+                              : r.status === 'rejected'
+                              ? 'bg-red-100 text-red-800'
+                              : 'bg-amber-100 text-amber-800'
+                          }`}
+                        >
+                          {r.status}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => handleDelete(r._id)}
+                          className="px-3 py-1 bg-gray-800 text-white text-sm rounded hover:bg-black"
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </li>
                   ))}
                 </ul>

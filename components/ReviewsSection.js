@@ -29,7 +29,7 @@ export default function ReviewsSection() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center text-gray-800">
           What our clients say
         </h1>
-        <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto font-medium">
           Real feedback from people we&apos;ve worked with.
         </p>
 
@@ -40,15 +40,15 @@ export default function ReviewsSection() {
             {reviews.map((r) => (
               <article
                 key={r._id}
-                className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm"
+                className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm font-regular"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <StarDisplay stars={r.stars} />
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">&ldquo;{r.words}&rdquo;</p>
+                <p className="text-gray-700 mb-4 leading-relaxed font-regular">&ldquo;{r.words}&rdquo;</p>
                 <div>
-                  <p className="font-semibold text-gray-800">{r.name}</p>
-                  <p className="text-sm text-gray-500">{r.title}</p>
+                  <p className=" text-black font-regular">{r.name}</p>
+                  <p className="text-sm text-gray-500 font-regular">{r.title}</p>
                 </div>
               </article>
             ))}

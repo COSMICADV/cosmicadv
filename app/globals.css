@@ -34,31 +34,39 @@ body {
   overflow-x: hidden;
 }
 @font-face {
-  font-family: 'Eurostile Becker Heavy';
-  src: url('/fonts/EurostileBeckerHeavyRegular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Eurostile';
+  src: url('/fonts/EuroStyle Normal.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Eurostile Becker';
-  src: url('/fonts/EurostileBeckerHeavyRegular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Eurostile';
+  src: url('/fonts/eurostile.TTF') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Eurostile Bold';
-  src: url('/fonts/eurostile-bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-body {
-  font-family: 'Eurostile Becker', sans-serif;
-}
-@font-face {
-  font-family: 'Eurostile Regular';
+  font-family: 'Eurostile';
   src: url('/fonts/eurostileRegular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Eurostile';
+  src: url('/fonts/eurostile-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Eurostile';
+  src: url('/fonts/EurostileBeckerHeavyRegular.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Eurostile', sans-serif;
+  font-weight: 400;
 }
 
 h1,
@@ -67,6 +75,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Eurostile Regular', sans-serif;
-  font-weight: bold; /* Apply bold to make it bold but not extra bold */
+  font-family: 'Eurostile', sans-serif;
+  font-weight: 700;
 }
