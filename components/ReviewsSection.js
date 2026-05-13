@@ -26,12 +26,12 @@ export default function ReviewsSection() {
   return (
     <div className="min-h-screen bg-white py-12 px-4 md:px-8" id="reviews">
       <div className="container mx-auto max-w-6xl">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center text-gray-800">
-          What our clients say
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-12 text-center text-gray-800">
+          Experiences that speak
         </h1>
-        <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto font-medium">
+        {/* <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto font-medium">
           Real feedback from people we&apos;ve worked with.
-        </p>
+        </p> */}
 
         {loading ? (
           <p className="text-center text-gray-500">Loading reviews…</p>

@@ -20,28 +20,28 @@ const teamMembers = [
     image: 'https://i.postimg.cc/wMmC0rJt/Ahmad-Code-jpg.jpg',
   },
   {
-    name: 'Kadri',
+    name: 'Fares',
+    role: 'Design',
+    image:
+      'https://i.postimg.cc/d3yb4fdy/Fares-Design-jpg.jpg',
+  },
+  {
+    name: 'Kadrey',
     role: 'Design',
     image:
     'https://i.postimg.cc/x8zwtZHL/Ahmad-Design-jpg.jpg',
   },
   {
-    name: 'Magdy',
+    name: 'Magdey',
     role: 'Logistics',
     image:
       'https://i.postimg.cc/HnyqBN5X/Ahmad-logistics-jpg.jpg',
   },
   {
-    name: 'Zyad',
+    name: 'Ziad',
     role: 'Design',
     image:
       'https://i.postimg.cc/7h2FmR77/Zyad-Digital-jpg.jpg',
-  },
-  {
-    name: 'Fares',
-    role: 'Design',
-    image:
-      'https://i.postimg.cc/d3yb4fdy/Fares-Design-jpg.jpg',
   },
   {
     name: 'Salma',
