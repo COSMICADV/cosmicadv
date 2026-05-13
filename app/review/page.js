@@ -9,7 +9,7 @@ export default function ReviewPage() {
           WE VALUE YOUR FEEDBACK
         </h1>
         <p className="text-gray-600 text-center mb-8">
-          We'd love to hear about your experience with COSMiC. Sharing your genuine feedback helps us improve and helps others make informed choices. All reviews are reviewed before posting.
+          We&apos;d love to hear about your experience with COSMiC. Sharing your genuine feedback helps us improve and helps others make informed choices. All reviews are reviewed before posting.
         </p>
         <ReviewForm />
         <p className="mt-8 text-center">
