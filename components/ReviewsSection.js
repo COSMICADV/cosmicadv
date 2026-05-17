@@ -49,6 +49,9 @@ export default function ReviewsSection() {
                 <div>
                   <p className=" text-black font-regular">{r.name}</p>
                   <p className="text-sm text-gray-500 font-regular">{r.title}</p>
+                  {r.location && (
+                    <p className="text-sm text-gray-400 font-regular">{r.location}</p>
+                  )}
                 </div>
               </article>
             ))}

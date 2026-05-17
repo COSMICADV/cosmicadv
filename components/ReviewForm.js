@@ -6,6 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 export default function ReviewForm() {
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
+  const [location, setLocation] = useState('');
   const [stars, setStars] = useState(3);
   const [words, setWords] = useState('');
 
@@ -16,7 +17,7 @@ export default function ReviewForm() {
       const res = await fetch('/api/reviews', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, title, stars, words }),
+        body: JSON.stringify({ name, title, location, stars, words }),
       });
       const data = await res.json().catch(() => ({ message: 'Invalid response' }));
       if (!res.ok) {
@@ -28,6 +29,7 @@ export default function ReviewForm() {
       });
       setName('');
       setTitle('');
+      setLocation('');
       setStars(3);
       setWords('');
     } catch (err) {
@@ -57,6 +59,17 @@ export default function ReviewForm() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="e.g. Marketing Manager, CEO"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
+          <input
+            type="text"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            placeholder="e.g. United States, UAE"
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
             required
           />

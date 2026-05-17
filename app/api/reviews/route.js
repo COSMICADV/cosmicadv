@@ -5,7 +5,7 @@ import { getDb } from '@/lib/mongodb';
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, title, stars, words } = body;
+    const { name, title, location, stars, words } = body;
 
     if (!name?.trim() || !title?.trim() || !words?.trim()) {
       return NextResponse.json(
@@ -26,6 +26,7 @@ export async function POST(req) {
     const newReview = {
       name: name.trim(),
       title: title.trim(),
+      location: location?.trim() || '',
       stars: starsNum,
       words: words.trim(),
       status: 'pending', // pending | approved | rejected
@@ -62,6 +63,7 @@ export async function GET() {
       _id: r._id.toString(),
       name: r.name,
       title: r.title,
+      location: r.location || '',
       stars: r.stars,
       words: r.words,
       createdAt: r.createdAt?.toISOString?.() ?? null,

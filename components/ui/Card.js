@@ -11,7 +11,7 @@
 
 //   return (
 //     <div
-//       className="w-full max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
+//       className="w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
 //       data-aos="fade-up"
 //       style={{ height: '650px' }}
 //     >
@@ -77,7 +77,7 @@ function Card({ image, title, description, points, href }) {
 
   return (
     <div
-      className="w-full max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
+      className="w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
       data-aos="fade-up"
       style={{ height: '650px' }}
     >

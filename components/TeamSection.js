@@ -47,7 +47,7 @@ const teamMembers = [
     name: 'Salma',
     role: 'Marketing',
     image:
-      'https://i.postimg.cc/D0F4594T/black.jpg',
+      'https://i.postimg.cc/RF6b4W6g/Salma-Marketing-jpg.jpg',
   },
 ];
 

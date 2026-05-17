@@ -80,7 +80,7 @@ function CardContainer() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-center text-gray-800">
           Solutions
         </h1>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           <Card
             image={'/cardImages/DigitalMarketing2.svg'}
             title="Digital Marketing"
@@ -115,6 +115,17 @@ function CardContainer() {
             image={'/cardImages/DigitalPrining2.svg'}
             title="Digital Print"
             description="We print large or very small high quality low cost with a quick reliable ‭& ‬honest service‭."
+            points={[
+              'In&Ourdoor Printing',
+              'Digital Printing',
+              'MUGS, T-SHIRTS, BAGS & MORE',
+            ]}
+            href="http://digitalprintegypt.com/"
+          />
+          <Card
+            image={'/cardImages/AICreativity.svg'}
+            title="Ai Creativity"
+            description="Redefining the future of content. We leverage advanced generative AI to produce high-impact visuals, stunning video productions, and cutting-edge ad campaigns at the speed of imagination."
             points={[
               'In&Ourdoor Printing',
               'Digital Printing',
