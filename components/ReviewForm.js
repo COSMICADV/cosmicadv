@@ -7,7 +7,7 @@ export default function ReviewForm() {
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
   const [location, setLocation] = useState('');
-  const [stars, setStars] = useState(3);
+  const [stars, setStars] = useState(5);
   const [words, setWords] = useState('');
 
   async function handleSubmit(e) {
@@ -30,7 +30,7 @@ export default function ReviewForm() {
       setName('');
       setTitle('');
       setLocation('');
-      setStars(3);
+      setStars(5);
       setWords('');
     } catch (err) {
       toast.error(err.message || 'Failed to submit. Please try again.', { id: loadingToast });
