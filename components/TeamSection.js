@@ -4,7 +4,7 @@ import Image from 'next/image';
 const teamMembers = [
   {
     name: 'Khaled',
-    role: 'Mentor',
+    role: 'Founder',
     image:
       'https://i.postimg.cc/5yChnrvz/Khaled-Mentor-jpg.jpg',
   },
@@ -12,7 +12,7 @@ const teamMembers = [
     name: 'Shams',
     role: 'Accounting',
     image:
-      'https://i.postimg.cc/D0F4594T/black.jpg',
+      'https://i.postimg.cc/dQpFhQpL/Shams-Accounting-jpg.jpg',
   },
   {
     name: 'Shaaban',
@@ -39,7 +39,7 @@ const teamMembers = [
   },
   {
     name: 'Ziad',
-    role: 'Design',
+    role: 'Social',
     image:
       'https://i.postimg.cc/7h2FmR77/Zyad-Digital-jpg.jpg',
   },
