@@ -2,13 +2,13 @@ import ReviewForm from '@/components/ReviewForm';
 
 export default function ReviewPage() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4 md:px-12 py-20 overflow-hidden">
-      <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div className="min-h-screen bg-white flex items-start lg:items-center justify-center px-4 md:px-12 pt-20 pb-10 lg:py-20 overflow-hidden">
+      <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
-        {/* Left column */}
-        <div className="relative">
+        {/* Left column — hidden on mobile */}
+        <div className="relative mt-8">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-black text-white text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+          <div className="inline-flex items-center gap-2 bg-black text-white text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-2">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2l2.09 6.26L20 9.27l-4.91 4.73 1.18 6.73L12 17.77l-4.27 3.96L8.91 14 4 9.27l5.91-.01z"/>
             </svg>
@@ -16,14 +16,14 @@ export default function ReviewPage() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-black mb-6">
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-black mb-4">
             Your opinion<br />
             helps us<br />
             <span className="text-gray-400">grow.</span>
           </h1>
 
           {/* Divider with asterisk */}
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-6 hidden md:block">
             <div className="h-px bg-gray-300 w-32"></div>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-gray-400 shrink-0">
               <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
@@ -52,9 +52,9 @@ export default function ReviewPage() {
         </div>
 
         {/* Right column — form card */}
-        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-10">
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-5 sm:p-8 md:p-10">
           <ReviewForm />
-          <p className="mt-5 text-center text-xs text-gray-400 flex items-center justify-center gap-1">
+          <p className="mt-4 text-center text-xs text-gray-400 flex items-center justify-center gap-1">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"/>

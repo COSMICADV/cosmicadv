@@ -2,6 +2,10 @@
 
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+
+const GOOGLE_MAPS_URL =
+  'https://www.google.com/maps/place/COSMIC+advertising+solutions/@30.0055535,31.4698295,17z/data=!3m1!4b1!4m6!3m5!1s0x1458413b331675d1:0xbefede3201b5db8b!8m2!3d30.0055535!4d31.4698295!16s%2Fg%2F1tttj01k?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D';
 
 const LOCATIONS = [
   'United Arab Emirates',
@@ -69,6 +73,49 @@ function SendIcon() {
   );
 }
 
+function SuccessModal() {
+  const router = useRouter();
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/40 backdrop-blur-sm">
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-8 flex flex-col items-center text-center">
+        {/* Checkmark */}
+        <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+
+        <h3 className="text-xl font-bold text-black mb-2">Thank you!</h3>
+        <p className="text-gray-500 text-sm leading-relaxed mb-6">
+          Your review has been submitted and will appear after approval. We truly appreciate you taking the time to share your experience with COSMiC.
+        </p>
+
+        <div className="flex flex-col gap-3 w-full">
+          <a
+            href={GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 bg-black text-white py-3 rounded-xl text-sm font-semibold hover:bg-gray-900 transition-all duration-200 active:scale-95"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            Review us on Google
+          </a>
+
+          <button
+            onClick={() => router.push('/')}
+            className="w-full py-3 rounded-xl text-sm font-semibold border border-gray-200 text-gray-700 hover:bg-gray-50 transition-all duration-200 active:scale-95"
+          >
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ReviewForm() {
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
@@ -76,6 +123,7 @@ export default function ReviewForm() {
   const [location, setLocation] = useState('');
   const [stars, setStars] = useState(5);
   const [words, setWords] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -91,26 +139,26 @@ export default function ReviewForm() {
         toast.error(data.message || 'Something went wrong', { id: loadingToast });
         return;
       }
-      toast.success(data.message || 'Thank you! Your review will appear after approval.', {
-        id: loadingToast,
-      });
+      toast.dismiss(loadingToast);
       setName('');
       setTitle('');
       setCompany('');
       setLocation('');
       setStars(5);
       setWords('');
+      setShowModal(true);
     } catch (err) {
       toast.error(err.message || 'Failed to submit. Please try again.', { id: loadingToast });
     }
   }
 
   const inputClass =
-    'w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl bg-white text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 transition';
+    'w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl bg-white text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 transition';
 
   return (
     <>
       <Toaster position="top-center" />
+      {showModal && <SuccessModal />}
 
       {/* Header */}
       <div className="flex items-start gap-3 mb-1">
@@ -121,11 +169,11 @@ export default function ReviewForm() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+      <form onSubmit={handleSubmit} className="mt-4 space-y-3">
 
         {/* Name */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Name</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
           <div className="relative flex items-center">
             <span className="absolute left-3"><PersonIcon /></span>
             <input
@@ -141,7 +189,7 @@ export default function ReviewForm() {
 
         {/* Title */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Title</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
           <div className="relative flex items-center">
             <span className="absolute left-3"><BriefcaseIcon /></span>
             <input
@@ -157,7 +205,7 @@ export default function ReviewForm() {
 
         {/* Company */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Company</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Company</label>
           <div className="relative flex items-center">
             <span className="absolute left-3"><BuildingIcon /></span>
             <input
@@ -172,13 +220,13 @@ export default function ReviewForm() {
 
         {/* Location */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Location</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
           <div className="relative flex items-center">
             <span className="absolute left-3 z-10"><PinIcon /></span>
             <select
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="w-full pl-10 pr-10 py-3 border border-gray-200 rounded-xl bg-white text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300 transition appearance-none"
+              className="w-full pl-10 pr-10 py-2.5 border border-gray-200 rounded-xl bg-white text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300 transition appearance-none"
               required
             >
               <option value="" disabled>e.g. United States, UAE</option>
@@ -192,16 +240,16 @@ export default function ReviewForm() {
 
         {/* Star rating */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
             How would you rate our service?
           </label>
-          <div className="flex gap-1">
+          <div className="flex gap-0.5">
             {[1, 2, 3, 4, 5].map((n) => (
               <button
                 key={n}
                 type="button"
                 onClick={() => setStars(n)}
-                className={`text-5xl focus:outline-none transition-transform hover:scale-110 ${
+                className={`text-4xl sm:text-5xl focus:outline-none transition-transform active:scale-95 hover:scale-110 ${
                   n <= stars ? 'text-black' : 'text-gray-200'
                 }`}
                 aria-label={`${n} star${n > 1 ? 's' : ''}`}
@@ -210,12 +258,12 @@ export default function ReviewForm() {
               </button>
             ))}
           </div>
-          <p className="text-xs text-gray-400 mt-1">{stars} out of 5</p>
+          <p className="text-xs text-gray-400 mt-0.5">{stars} out of 5</p>
         </div>
 
         {/* Review text */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
             What do you say about us?
           </label>
           <textarea
@@ -223,7 +271,7 @@ export default function ReviewForm() {
             onChange={(e) => setWords(e.target.value)}
             rows={4}
             placeholder="Share your thoughts..."
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 transition resize-none"
+            className="w-full px-4 py-2.5 border border-gray-200 rounded-xl bg-white text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 transition resize-none"
             required
           />
         </div>
@@ -231,7 +279,7 @@ export default function ReviewForm() {
         {/* Submit */}
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-2 bg-black text-white py-3.5 rounded-xl text-sm font-semibold hover:bg-gray-900 transition-all duration-200"
+          className="w-full flex items-center justify-center gap-2 bg-black text-white py-3 rounded-xl text-sm font-semibold hover:bg-gray-900 transition-all duration-200 active:scale-95"
         >
           <SendIcon />
           Share Your Feedback
