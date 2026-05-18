@@ -42,17 +42,18 @@ export default function ReviewsSection() {
                 key={r._id}
                 className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm font-regular"
               >
-                <div className="flex items-center gap-2 mb-3">
-                  <StarDisplay stars={r.stars} />
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed font-regular">&ldquo;{r.words}&rdquo;</p>
-                <div>
-                  <p className=" text-black font-regular">{r.name}</p>
-                  <p className="text-sm text-gray-500 font-regular">{r.title}</p>
+                <div className="mb-3">
+                  <p className="text-black font-semibold">{r.name}</p>
+                  <p className="text-sm text-gray-500">{r.title}</p>
+                  {r.company && (
+                    <p className="text-sm text-gray-500">{r.company}</p>
+                  )}
                   {r.location && (
-                    <p className="text-sm text-gray-400 font-regular">{r.location}</p>
+                    <p className="text-sm text-gray-400">{r.location}</p>
                   )}
                 </div>
+                <StarDisplay stars={r.stars} />
+                <p className="text-gray-700 mt-3 leading-relaxed">&ldquo;{r.words}&rdquo;</p>
               </article>
             ))}
           </div>

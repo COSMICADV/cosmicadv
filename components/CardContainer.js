@@ -82,6 +82,17 @@ function CardContainer() {
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           <Card
+            image={'/cardImages/AICreativity.svg'}
+            title="Ai Creativity"
+            description="Redefining the future of content. We leverage advanced generative AI to produce high-impact visuals, stunning video productions, and cutting-edge ad campaigns at the speed of imagination."
+            points={[
+              'In&Ourdoor Printing',
+              'Digital Printing',
+              'MUGS, T-SHIRTS, BAGS & MORE',
+            ]}
+            href="#"
+          />
+          <Card
             image={'/cardImages/DigitalMarketing2.svg'}
             title="Digital Marketing"
             description="Elevate your brand with impactful, accessible messages that drive audience engagement and encourage meaningful action."
@@ -121,17 +132,6 @@ function CardContainer() {
               'MUGS, T-SHIRTS, BAGS & MORE',
             ]}
             href="http://digitalprintegypt.com/"
-          />
-          <Card
-            image={'/cardImages/AICreativity.svg'}
-            title="Ai Creativity"
-            description="Redefining the future of content. We leverage advanced generative AI to produce high-impact visuals, stunning video productions, and cutting-edge ad campaigns at the speed of imagination."
-            points={[
-              'In&Ourdoor Printing',
-              'Digital Printing',
-              'MUGS, T-SHIRTS, BAGS & MORE',
-            ]}
-            href="#"
           />
         </div>
       </div>
