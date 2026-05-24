@@ -372,6 +372,14 @@ function NavigationBar() {
             </Link>
           </li>
           <li>
+            <Link
+              href="/reviews"
+              className={pathName === '/reviews' ? active : inActive}
+            >
+              Reviews
+            </Link>
+          </li>
+          <li>
             <Link href={getLink('contact-me')} className={inActive}>
               Contact Us
             </Link>
@@ -434,6 +442,17 @@ function NavigationBar() {
                   onClick={toggleMobileMenu}
                 >
                   About Us
+                </Link>
+              </li>
+              <li className="py-2">
+                <Link
+                  href="/reviews"
+                  className={`block text-center ${
+                    pathName === '/reviews' ? active : inActive
+                  }`}
+                  onClick={toggleMobileMenu}
+                >
+                  Reviews
                 </Link>
               </li>
               <li className="py-2">
