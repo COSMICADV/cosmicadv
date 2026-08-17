@@ -23,10 +23,10 @@ const teamMembers = [
     name: 'Fares',
     role: 'Design',
     image:
-      'https://i.postimg.cc/d3yb4fdy/Fares-Design-jpg.jpg',
+      'https://i.postimg.cc/GpWZP2SP/1785982151147-3-jpg-(3).jpg',
   },
   {
-    name: 'Kadrey',
+    name: 'Kadry',
     role: 'Design',
     image:
     'https://i.postimg.cc/x8zwtZHL/Ahmad-Design-jpg.jpg',
