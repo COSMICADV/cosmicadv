@@ -90,7 +90,7 @@ function CardContainer() {
               'Digital Printing',
               'MUGS, T-SHIRTS, BAGS & MORE',
             ]}
-            href="#"
+            href="/ai-creativity"
           />
           <Card
             image={'/cardImages/DigitalMarketing2.svg'}

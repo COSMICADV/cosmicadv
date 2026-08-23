@@ -60,18 +60,24 @@
 // export default Card;
 'use client';
 import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Image from 'next/image';
 
 function Card({ image, title, description, points, href }) {
+  const router = useRouter();
+
   useEffect(() => {
     AOS.init({ duration: 1000, easing: 'ease-in-out' });
   }, []);
 
   const handleLearnMoreClick = () => {
-    if (href) {
+    if (!href) return;
+    if (href.startsWith('http')) {
       window.open(href, '_blank');
+    } else {
+      router.push(href);
     }
   };
 

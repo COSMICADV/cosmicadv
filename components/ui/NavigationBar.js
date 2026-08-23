@@ -362,7 +362,6 @@ function NavigationBar() {
               Solutions
             </Link>
           </li>
-
           <li>
             <Link
               href="#aboutus"
@@ -432,7 +431,6 @@ function NavigationBar() {
                   Solutions
                 </Link>
               </li>
-
               <li className="py-2">
                 <Link
                   href="#aboutus"
