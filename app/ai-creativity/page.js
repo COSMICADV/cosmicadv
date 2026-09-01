@@ -1,4 +1,5 @@
-import AICreativity from './AICreativity';
+import AiCreativity from '@/components/AiCreativity';
+import AiWorkGrid from '@/components/AiWorkGrid';
 
 export const metadata = {
   title: 'AI Creativity | COSMIC ADV Solutions',
@@ -7,5 +8,10 @@ export const metadata = {
 };
 
 export default function AICreativityPage() {
-  return <AICreativity />;
+  return (
+    <main>
+      <AiCreativity workHref="#work" ctaLabel="See the work" ctaArrow="↓" />
+      <AiWorkGrid contactHref="/#contact-me" solutionsHref="/#solutions" />
+    </main>
+  );
 }
